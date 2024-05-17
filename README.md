@@ -94,4 +94,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
     - Search Bar
     - Movie Suggestions
 
+### Project Feature Completions
+- Created the app
+- Configured Tailwindcss
+- Header component with logo
+- Routing of the app
+- Sign in and Sign up Form in place
+- Form Validation
+    - UseRef Hook
+
 
