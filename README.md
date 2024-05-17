@@ -71,16 +71,19 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### Project Setup/Configuration
 
-    - npx create-react-app project-name
+- npx create-react-app project-name
     - Setup Tailwind
         -  Refer to the tailwind Doc for create-react-app
+    - Setup React-Router-DOM as Dev Dependency
+    
 
 ### Project Plan/Features 
 - Sign-In/Login-In Page
-        - Forms
+    - Forms
         - Redirect to Browse Page
+        - Sign Up form
 - Browse Page (After Authentication)
-        - Header
+    - Header
         - Main Movie
             - Trailer in BG
             - Movie Title and Description
