@@ -102,5 +102,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - Sign in and Sign up Form in place
 - Form Validation
     - UseRef Hook
+- FireBase Setup
+- Hosting the application on Firebase
+- Authenticaiton
+- Login-In-Sign-up inplace using firebase
 
 

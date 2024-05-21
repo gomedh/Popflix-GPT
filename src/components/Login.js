@@ -2,6 +2,8 @@
  import Header from './Header'
  import { BG_URL } from '../utils/constants'
  import {checkValidateData} from "../utils/validate"
+ import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+ import { auth } from "../utils/firebase";
  
  const Login = () => {
 
@@ -28,10 +30,40 @@
         const pswrdValue = pswrd.current.value;
         const userNameValue = isSignInForm ? null : userName.current.value;
 
-        console.log(emailValue,pswrdValue,userNameValue);
-
         const message = checkValidateData(emailValue, pswrdValue, userNameValue);
         seterrorMessage(message);
+
+        if (message) return;
+        
+        // Sign-In/Up Logics
+        if (!isSignInForm) {
+            // Sign-Up logic
+            createUserWithEmailAndPassword(auth, emailValue, pswrdValue)
+            .then((userCredential) => {
+              // Signed up 
+              const user = userCredential.user;
+              // ...
+            })
+            .catch((error) => {
+              const errorCode = error.code;
+              const errorMessage = error.message;
+              seterrorMessage(errorCode + "-" + errorMessage);
+            });
+        } else {
+          // Sign-In logic
+                signInWithEmailAndPassword(auth, emailValue, pswrdValue)
+                    .then((userCredential) => {
+                      // Signed in 
+                      const user = userCredential.user;
+                      // ...
+                    })
+                    .catch((error) => {
+                      const errorCode = error.code;
+                      const errorMessage = error.message;
+                      seterrorMessage(errorCode + "-" + errorMessage);
+                    });
+        }
+
    }
   
 // ********************************* - Return - **********************************
