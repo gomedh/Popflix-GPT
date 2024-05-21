@@ -106,5 +106,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - Hosting the application on Firebase
 - Authenticaiton
 - Login-In-Sign-up inplace using firebase
+- COnfigured redux store & userslice
 
 
