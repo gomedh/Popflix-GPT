@@ -4,6 +4,7 @@
  import {checkValidateData} from "../utils/validate"
  import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
  import { auth } from "../utils/firebase";
+ import { useNavigate } from 'react-router-dom'
  
  const Login = () => {
 
@@ -15,6 +16,7 @@
   const email = useRef(null) // To refer the email from input
   const pswrd = useRef(null) // To refer the pswrd from input
   const userName = useRef(null) // To refer the user from input
+  const navigate = useNavigate(); // TO navigate to the page on login
 
 // ********************************* - Methods - **********************************
 
@@ -42,6 +44,8 @@
             .then((userCredential) => {
               // Signed up 
               const user = userCredential.user;
+              console.log(user, 'signup');
+              navigate("/browse");
               // ...
             })
             .catch((error) => {
@@ -55,6 +59,8 @@
                     .then((userCredential) => {
                       // Signed in 
                       const user = userCredential.user;
+                      console.log(user, 'signin');
+                      navigate("/browse");
                       // ...
                     })
                     .catch((error) => {
