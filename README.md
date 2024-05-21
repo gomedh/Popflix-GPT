@@ -93,6 +93,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - Netflix GPT
     - Search Bar
     - Movie Suggestions
+- Fetch Movie data from TMDB Movies
 
 ### Project Feature Completions
 - Created the app
@@ -107,5 +108,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - Authenticaiton
 - Login-In-Sign-up inplace using firebase
 - COnfigured redux store & userslice
+- Implemented Sign-out feature
+- Added photo and name
+- Update profile and app redirection
 
 
