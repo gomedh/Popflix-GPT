@@ -113,5 +113,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - Update profile and app redirection
 - If user is not logged inredirect to login page andvvice-versa
 - unsubscribe when the component is unmounted for onAuthStaeChanged callback
+- Registered for TMDB Movies API and create an app
+- Get the access token and movie list api to get the movies list
+- Consume the access token and movie list api to get the movies list in browse page
 
 
