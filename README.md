@@ -111,5 +111,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - Implemented Sign-out feature
 - Added photo and name
 - Update profile and app redirection
+- If user is not logged inredirect to login page andvvice-versa
+- unsubscribe when the component is unmounted for onAuthStaeChanged callback
 
 
