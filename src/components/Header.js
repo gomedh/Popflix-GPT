@@ -53,7 +53,7 @@ const Header = () => {
                 alt='User-ICON'
                 src={user?.photoURL === null ? USER_AVATAR : user?.photoURL}
                 ></img>
-                <button onClick={handleSignOut} className='font-bold text-white'>(Sign-Out)</button>
+                <button onClick={handleSignOut} className='bg-red-700 text-white px-4 mx-4 my-1 rounded-lg h-12 hover:bg-red-900 hover:cursor-pointer'>Sign-Out</button>
             </div>)}
     </div>
   )

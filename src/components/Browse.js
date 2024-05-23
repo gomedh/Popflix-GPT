@@ -1,26 +1,29 @@
 import React, { useEffect } from 'react'
 import Header from './Header'
-import { API_OPTIONS } from '../utils/constants';
+import useNowPlayingMovies from '../hooks/useNowPlayingMovies'
+import MainContainer from './MainContainer';
+import SecondaryContainer from './SecondaryContainer';
+
 
 const Browse = () => {
 
 // ********************************* - Variables & Hooks - **********************************
-
-// ********************************* - Methods - **********************************
-const getMovies = async() => {
-  const data = await fetch('https://api.themoviedb.org/3/movie/now_playing?page=1', API_OPTIONS);
-  const movies = await data.json();
-  console.log(movies);
-}
-
-useEffect(() => {
-  getMovies();
-},[])
+useNowPlayingMovies(); // Custom hook to call the movies api from TMDB
 
 // ********************************* - Return - **********************************
   return (
     <div>
       <Header />
+      <MainContainer />
+      <SecondaryContainer />
+      {/* {
+        MainContainer
+          - Video Background
+          - Video Title
+        Secondary Container
+          - Movie List * n
+          - Movie Card * n
+      } */}
     </div>
   )
 }
