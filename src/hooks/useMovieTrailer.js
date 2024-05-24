@@ -11,7 +11,7 @@ const useMovieTrailer = (movieId) => {
         const response  = await fetch( GET_MOVIE_TRAILERS + movieId +'/videos', API_OPTIONS );
         const data = await response.json(); 
         const filterData  = data.results.filter((video) => video.type === "Trailer");
-        const trailer = filterData.lenght ? filterData[0] : data.results[0];
+        const trailer = filterData.lenght ? filterData[1] : data.results[1];
         dispatch(addTrailerVideo(trailer));
     }
     useEffect(() => {

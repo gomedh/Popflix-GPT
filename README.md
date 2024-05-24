@@ -116,5 +116,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - Registered for TMDB Movies API and create an app
 - Get the access token and movie list api to get the movies list
 - Consume the access token and movie list api to get the movies list in browse page
+- Custome hook for now playing movie
+- Created a movie slice
+- Updated store with the data
+- Planning for the main and secondary container
+- Created components for these and fetch data for trailer video
+- Updated the store with trailer video data
+- Fixed the CSS after embedding the youtube video and make it autoplay with mute audio
 
 
