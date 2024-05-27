@@ -41,7 +41,7 @@
         
         // Sign-In/Up Logics
         if (!isSignInForm) {
-            // Sign-Up logic
+            // Sign-Up logic - creating user in the firebase
             createUserWithEmailAndPassword(auth, emailValue, pswrdValue)
             .then((userCredential) => {
               // Signed up 

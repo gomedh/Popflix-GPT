@@ -123,5 +123,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - Created components for these and fetch data for trailer video
 - Updated the store with trailer video data
 - Fixed the CSS after embedding the youtube video and make it autoplay with mute audio
+- Filled Secondary container with movies list
+- IMG CDN thing in place for TMDB
+- Created a custom hook for upcooming and top rated movvies and consumed them
+
 
 

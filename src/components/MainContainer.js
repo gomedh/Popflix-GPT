@@ -7,7 +7,10 @@ const MainContainer = () => {
 
     const movies = useSelector(store => store.movies?.nowPlayingMovies);
     if(!movies) return; // This is also known as early return
-    const firstMovie = movies[0];
+
+    // Random movie index generation
+    const randomIndex = Math.floor(Math.random() * movies.length);
+    const firstMovie = movies[randomIndex];
   
     const {original_title, overview, id} = firstMovie;
 
