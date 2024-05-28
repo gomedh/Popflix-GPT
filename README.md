@@ -94,6 +94,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
     - Search Bar
     - Movie Suggestions
 - Fetch Movie data from TMDB Movies
+- Multi-language support
 
 ### Project Feature Completions
 - Created the app
@@ -127,6 +128,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - IMG CDN thing in place for TMDB
 - Created a custom hook for upcooming and top rated movvies and consumed them
 - GPT Search feature
+- Multi-language support
+- Integrate GPT APIs
 
 
 
