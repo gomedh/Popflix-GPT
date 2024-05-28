@@ -8,6 +8,7 @@ import { useEffect } from'react';
 import { useDispatch } from 'react-redux';
 import { addUser, removeUser } from '../utils/userSlice';
 import { onAuthStateChanged } from "firebase/auth";
+import { toggleGptSearchView } from '../utils/gptSlice';
 
 const Header = () => {
 
@@ -24,6 +25,11 @@ const Header = () => {
       // An error happened.
       console.log(error);
     });
+  }
+
+  const handleGPTSearchClick = () => {
+    // Toggle search view
+    dispatch(toggleGptSearchView())
   }
 
   // Get currently signed in user and checks the auth of the user everytime component is re-renderred
@@ -48,12 +54,16 @@ const Header = () => {
     <div className='absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex justify-between'>
       <img className="w-44 mx-auto md:mx-0" src={LOGO} alt="logo" />
       {user && (<div className='flex p-2'>
+                <button onClick={handleGPTSearchClick}
+                className='py-2 px-4 m-2 bg-purple-800 text-white 
+                mx-4 my-1 rounded-lg h-12 hover:bg-purple-950 hover:cursor-pointer'>GPT Search</button>
                 <img
                 className='w-12 h-12'
                 alt='User-ICON'
                 src={user?.photoURL === null ? USER_AVATAR : user?.photoURL}
                 ></img>
-                <button onClick={handleSignOut} className='bg-red-700 text-white px-4 mx-4 my-1 rounded-lg h-12 hover:bg-red-900 hover:cursor-pointer'>Sign-Out</button>
+                <button onClick={handleSignOut} className='bg-red-700 text-white px-4 mx-4 my-1 rounded-lg h-12
+                 hover:bg-red-900 hover:cursor-pointer'>Sign-Out</button>
             </div>)}
     </div>
   )

@@ -126,6 +126,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - Filled Secondary container with movies list
 - IMG CDN thing in place for TMDB
 - Created a custom hook for upcooming and top rated movvies and consumed them
+- GPT Search feature
 
 
 
