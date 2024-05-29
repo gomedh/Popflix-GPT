@@ -16,6 +16,11 @@ export const API_OPTIONS = {
     }
   };
 
+ export const gptDefaultSearchMessage = "Act as a Movie recommendation system and suggest some movies for the query : ";
+ export const GPTSearchLimitMessage = " . Only give me 5 movies, comma separated like the example result given ahead."
+ export const GPTExampleResult = "Batman, Parasite, Sting, Baghead, Forrest Gump"
+
+
   export const SUPPORTED_LANGUAGES = [
   {identifier: "en", name: "English"}, 
   {identifier: "pt", name: "Spanish"},
