@@ -57,14 +57,15 @@ const Header = () => {
   }, [])
 
   return (
-    <div className='absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex justify-between'>
+    // default is for mobile sm is for tab and md is for desktop
+    <div className='absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex justify-between flex-col md:flex-row'>
       <img className="w-44 mx-auto md:mx-0" src={LOGO} alt="logo" />
-      {user && (<div className='flex p-2'>
+      {user && (<div className='flex p-2 justify-between'>
                 {showGptButton && (<select className='p-2 bg-gray-900 text-white m-2' onChange={handlelanguageChange}>
                   {SUPPORTED_LANGUAGES.map((lang) => <option key={lang.identifier} value={lang.identifier}>{lang.name}</option>)}
                 </select>)}
                 <button onClick={handleGPTSearchClick}
-                className='py-2 px-4 m-2 bg-purple-800 text-white 
+                className='py-2 px-4 my-2 bg-purple-800 text-white 
                 mx-4 my-1 rounded-lg h-12 hover:bg-purple-950 hover:cursor-pointer'>
                 {showGptButton? "Home": "GPT Search" }
                 </button>
